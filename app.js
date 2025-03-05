@@ -42,7 +42,7 @@ function mostrarAmigos() {
 function sortearAmigo() {
     // Validar que haya amigos disponibles
     if (amigos.length === 0) {
-        alert("No hay amigos en la lista para sortear.");
+        alert("La lista de amigos está vacía. Agrega al menos un amigo antes de sortear.");
         return;
     }
     
@@ -53,5 +53,6 @@ function sortearAmigo() {
     let amigoSorteado = amigos[indiceAleatorio];
     
     // Mostrar el resultado
-    document.getElementById("resultadoSorteo").innerHTML = `Amigo secreto: <strong>${amigoSorteado}</strong>`;
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = `<li>${amigoSorteado}</li>`;
 }
